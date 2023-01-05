@@ -1,1 +1,35 @@
 <!-- formulaire pour créer un post -->
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title myBlog
+        link(rel="stylesheet" href="/public/css/style.css")
+    body
+        header 
+            h2 myBlog
+            div.home
+                a(href="/posts")
+                                    img(src="../../public/images/home.png",width="24", height="24")
+        .container 
+            span.head= `${!isEdit? 'Create a post':'Update post : '+post.titre}`
+            form(action=`${!isEdit?'/posts':'/posts/update/'+post._id}`, method="POST" class="form")
+                .input-container 
+                    label Titre 
+                    input(type="text" name="titre" value=`${isEdit ? post.titre:''}` required="true" placeholder="Titre")
+                .input-container 
+                    label Auteur 
+                    input(type="text" name="auteur" value=`${isEdit ? post.auteur:''}` placeholder="Auteur")
+                .input-container
+                    label Résumé 
+                    input(type="text" name="resume" value=`${isEdit ? post.resume:''}` required="true" placeholder="Résumé" max="100")
+                .input-container
+                    label Contenu -HTML- 
+                    textarea(type="text" name="content" required="true" placeholder="Contenu" rows="6")
+                        =`${isEdit ? post.content:''}`
+                button(type="submit" class="submit")=`${!isEdit? 'Add post':'Update'}`
+
+
+

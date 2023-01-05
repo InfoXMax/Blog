@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+}
+.posts {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: sans-serif;
+  margin-top: 120px;
+}
+.posts .empty {
+  width: 200px;
+  margin: 0 auto;
+  display: block;
+}
+.posts .create {
+  font-size: 18px;
+  margin-top: 10px;
+}
+.posts .create a {
+  transition: all 0.3s;
+  display: inline-block;
+  position: relative;
+}
+.posts .create a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: lightblue;
+  transform-origin: bottom right;
+  transition: transform 0.2s ease-out;
+}
+
+.posts .create a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+header {
+  padding: 18px;
+  background-color: rgb(255, 170, 127);
+  
+  position: fixed;
+  margin-bottom: 40px;
+  width: 100%;
+  top: 0;
+  z-index: 3;
+}
+.home {
+  position: absolute;
+  background: lavender;
+  padding: 5px 10px;
+  border-radius: 50% 0 0 50%;
+  box-shadow: 0px 0px 6px -2px black;
+  right: 15px;
+  z-index: 2;
+}
+
+header h2 {
+  margin: 0 auto;
+  width: fit-content;
+  font-weight: normal;
+  font-size: 34px;
+}
+main {
+  padding-top: 78px;
+  margin: 0 0 30px;
+}
+main h4 {
+  position: fixed;
+  background: transparent;
+  width: 100%;
+  padding: 12px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0px 0px 7px -4px black;
+}
+
+section {
+  margin: 0 15px;
+  margin-top: 50px;
+}
+
+article {
+  padding: 10px 15px;
+  background: #eee;
+  min-height: 200px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 6px -3px black;
+}
+article div.header {
+  background: #ccc;
+  padding: 6px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+article h3,
+.post span {
+  display: block;
+  margin: 8px 0;
+  text-transform: capitalize;
+}
+
+.resume {
+  margin: 14px 0;
+  background-color: rgb(223, 161, 60);
+  border-radius: 20px 0;
+  width: fit-content;
+  padding: 4px 20px;
+}
+
+.resume-article p {
+  display: inline;
+}
+
+a.home {
+  top: 80%;
+  position: fixed;
+}
+
+.container {
+  margin: 120px 15px 0;
+  background: #eee;
+  border-radius: 5px;
+  padding: 15px 30px;
+}
+
+.container > span.head {
+  margin-bottom: 10px;
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: sans-serif;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 5px 0;
+}
+input,
+textarea {
+  border: 1px solid rgb(181, 176, 176);
+  border-radius: 4px;
+  padding: 10px 15px;
+  resize: vertical;
+  outline: none;
+  animation-duration: 0.2s;
+}
+input:focus,
+textarea:focus {
+  border: 2px solid rgb(181, 176, 176);
+}
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: #f4634d;
+  border-radius: 6px;
+  border: none;
+  margin: 20px 0px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+button[type="submit"]:hover {
+  background: #d14c23;
+}

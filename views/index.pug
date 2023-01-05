@@ -1,1 +1,49 @@
 <!-- Liste de tous les posts -->
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title myBlog
+        link(rel="stylesheet" href="../public/css/style.css")
+    body 
+
+
+    header 
+        h2 myBlog
+        div.home
+            a(href="/posts")
+                img(src="../public/images/home.png",width="24", height="24")
+    if posts.length==0
+        .posts 
+            img(src="../public/images/db.png",width="24", height="24")
+            div No Posts!!
+            div.create Creer votre premier 
+                a(href="/posts/edit") Post 
+
+
+    else 
+        main    
+            
+            section  
+                each post in posts
+                    article.post 
+                        div.header
+                            h3.title= post.titre 
+                            div.actions
+                                a(href="/posts/edit/"+post._id)._
+                                                img(src="../public/images/edit.png",width="24", height="24")
+
+                                a(href="/posts/delete/"+post._id, onclick='if(!confirm("Confirmer la suppression?")) {return false} ')._ 
+                                                img(src="../public/images/delete.png",width="24", height="24")
+                        span.author= `Auteur : ${post.auteur?post.auteur:'Unkown'}`
+                        span.created-updated= `date de création : ${post.createdAt}`
+                        span.created-updated=  `date de modification : ${ post.updatedAt}`
+                        div.resume Résumé
+                        div.resume-article 
+                            p=`${post.resume }...`
+                            a(href='/posts/post/'+post._id) Lire plus
+    a(href="/posts/edit").home
+        img(src="../public/images/add.png",width="24", height="24")
