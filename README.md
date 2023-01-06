@@ -30,8 +30,8 @@ In order to run the application:
 ### `node server.js`
 
 <br />
-The blog use port 3000 (you can change it )
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The blog use port 3000 (you can change it )<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.<br>
 
 you need mongodb account to create and make a cluster then create Database and get the link.<br />
 
@@ -44,6 +44,6 @@ DB_URI=mongodb+srv://user:password@cluster0.spx6q.mongodb.net/myblog?retryWrites
 Don't forget to allow all ip to access to the database :
 From Mongodb Account >  Network Access > click on Allow Access From Anywhere
 <br>
-Now you can start posting and test the app
-<br>
-![Image description](https://i.imgur.com/NZCJ9b5.png)<br>
+Now you can start posting and test the app<br>
+<img src="https://i.imgur.com/NZCJ9b5.png">
+
