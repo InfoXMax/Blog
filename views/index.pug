@@ -8,11 +8,16 @@ html(lang="en")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         title myBlog
         link(rel="stylesheet" href="../public/css/style.css")
+        link(rel='icon', type='image/x-icon', href='https://infoxmax.github.io/infoxmax/img/avatar.png')
+
     body 
 
 
     header 
-        h2 myBlog
+        
+        h1.typewrite(data-period='2000', data-type='[ "Bienvenue", "Sur", "Mon Blog"]')
+        span.wrap
+
         div.home
             a(href="/posts")
                 img(src="../public/images/home.png",width="24", height="24")
@@ -47,3 +52,4 @@ html(lang="en")
                             a(href='/posts/post/'+post._id) Lire plus
     a(href="/posts/edit").home
         img(src="../public/images/add.png",width="24", height="24")
+        script(src='../public/js/script.js')

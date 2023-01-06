@@ -49,9 +49,8 @@
   transform-origin: bottom left;
 }
 header {
-  padding: 18px;
+  padding: 49px;
   background-color: rgb(255, 170, 127);
-  
   position: fixed;
   margin-bottom: 40px;
   width: 100%;
@@ -68,7 +67,7 @@ header {
   z-index: 2;
 }
 
-header h2 {
+header h1 {
   margin: 0 auto;
   width: fit-content;
   font-weight: normal;
